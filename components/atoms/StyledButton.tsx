@@ -33,7 +33,7 @@ const StyledPressable = styled.Pressable<StyledPressableProp>`
 const StyledButton: React.FC<StyledButtonProp>  = ({text, textColor, bgColor, borderRadius, border, textTransform, fontSize, fontWeight}) => {
   return (
     <StyledPressable bgColor={bgColor} borderRadius={borderRadius} border={border}>
-        <StyledText padding={'14px 20px'} color={textColor} textTransform={textTransform} fontSize={fontSize} fontWeight={fontWeight}>
+        <StyledText padding={'14px 20px'} color={textColor}  textTransform={textTransform} fontSize={fontSize} fontWeight={fontWeight} >
             {text}
         </StyledText>
     </StyledPressable>

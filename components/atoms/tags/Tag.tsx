@@ -1,34 +1,32 @@
-import { View, Text } from 'react-native'
 import React from 'react'
-
 import colors from '@/constants/colours'
-import StyledText, {StyledTextProp} from '@/components/atoms/typography/StyledText'
-import {StyledButtonProp} from '@/components/atoms/butttons/StyledButton'
 import styled from 'styled-components/native'
 
-interface TagProp extends StyledTextProp {
-    bgColor?: string
-    borderRadius?: string
-    border?: string
-}
-
-interface StyledViewProp extends TagProp{
-
+interface TagProp {
+  text: string
+  bgColor?: string
 }
 
 const StyledView = styled.View`
-    background-color: ${({ bgColor }: StyledViewProp) => bgColor || colors.tirtiry };
+  /* background-color: ${({ bgColor }: { bgColor: string }) => bgColor || colors.tirtiry}; */
+  background-color: ${colors.tirtiry};
+  border-radius: 50px;
 `
 
-const StyledTextData: StyledTextProp = {
-    color: colors.secondary,
-    fontWeight: '600'
-}
+const StyledText = styled.Text`
+  color: ${colors.secondary};
+  text-transform: capitalize;
+  padding: 4px 12px;
+  font-weight: 600;
+  font-size: 18;
+  margin: 2px 4px;
+`
 
-const Tag:React.FC<TagProp> = ({color, bgColor, border, borderRadius, fontSize, fontWeight, padding,textTransform}) => {
+
+const Tag: React.FC<TagProp> = ({ text, bgColor }) => {
   return (
-    <StyledView>
-        <StyledText {...StyledTextData}/>
+    <StyledView bgColor={bgColor}>
+      <StyledText>{text}</StyledText>
     </StyledView>
   )
 }

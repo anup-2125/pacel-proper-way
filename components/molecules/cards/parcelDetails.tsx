@@ -15,44 +15,35 @@ export interface ParcelDetailsProp {
 
 
 const StyledView = styled.View`
-    /* background-color: lightcoral; */
     flex: 1;
     justify-content: center;
     flex-direction: row;
-    padding: 12px;
+    padding: 16px;
     border-radius: 8px 8px 0 0;
     gap: 8px;
 `
 
 const DetailsContainer = styled.View`
     flex: 1;
-    /* background-color: blueviolet; */
     justify-content: space-between;
 `
 
 const IdEtaContainer = styled.View`
     flex: 1;
-    /* background-color: aqua; */
     flex-direction: row;
     justify-content: space-between;
 `
 
 const AddressLogoContainer = styled.View`
     flex: 2;
-    /* background-color: #be46d6; */
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 `
-
-const AddressContainer = styled.View`
-    flex: 1;
-`
-
-
 const ParcelDetails: React.FC<ParcelDetailsProp> = ({ cardId, due, imageURL, recipientName, eta }) => {
     return (
         <StyledView>
-            <Image source={{ uri: imageURL }} style={{ width: '20%', borderRadius: 8 }} resizeMode='cover' />
+            <Image source={{ uri: imageURL }} style={{ width: 80, height: 80, borderRadius: 8 }} resizeMode='cover' />
             <DetailsContainer>
 
                 <IdEtaContainer>
@@ -61,11 +52,11 @@ const ParcelDetails: React.FC<ParcelDetailsProp> = ({ cardId, due, imageURL, rec
                 </IdEtaContainer>
 
                 <AddressLogoContainer>
-                    <AddressContainer>
+                    <View>
                         <Text>Deliver to: {recipientName}</Text>
-                        <Text>Deliver by: {eta}</Text>
-                    </AddressContainer>
-                    <MaterialIcons name='chat' size={24} style={{ marginRight: 15 }} />
+                        <Text>Deliver by: {due}</Text>
+                    </View>
+                    <MaterialIcons name='chat' size={24} style={{ marginRight: 15 }} color={colors.secondary}/>
                 </AddressLogoContainer>
 
             </DetailsContainer>

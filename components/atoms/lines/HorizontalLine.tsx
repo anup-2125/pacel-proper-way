@@ -2,11 +2,17 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import styled from 'styled-components/native'
 
-const HorizontalLine = styled.View`
+interface HorizontalLineProp {
+    lineColor?: string,
+    width?: string
+}
+
+
+const HorizontalLine = styled.View<HorizontalLineProp>`
+    width: ${({ width }: HorizontalLineProp) => width || '100%'};
     height: 1px;
-    width: 100%;
-    margin: 10px 0;
-    background-color: #000f;
+    background-color: ${({ lineColor }: HorizontalLineProp) => lineColor || 'black'};
+    opacity: 0.5;
 `
 
 export default HorizontalLine

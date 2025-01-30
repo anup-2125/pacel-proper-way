@@ -3,7 +3,6 @@ import { useNavigation } from 'expo-router';
 import { Pressable, View, Text } from 'react-native';
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { DrawerNavigationProp } from '@react-navigation/drawer'
-import StyledText, { StyledTextProp } from '@/components/atoms/typography/StyledText';
 import colors from '@/constants/colours';
 
 type RootParamList = {

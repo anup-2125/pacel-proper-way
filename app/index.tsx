@@ -1,9 +1,8 @@
 import { Text, View, StatusBar } from "react-native";
 import styled from "styled-components/native";
-import ThemeProvider from "styled-components";
 import ParcelCard from "@/components/orgamisms/cards/ParcelCard";
-import PrimaryButton from "@/components/molecules/buttons/PrimaryButton";
 import colors from "@/constants/colours";
+
 const ScreenContainer = styled.SafeAreaView`
   height: 100%;
   align-items: center;
@@ -17,8 +16,9 @@ export default function Index() {
         backgroundColor={colors.primary}
       />
 
+
       <ParcelCard />
-      
+
     </ScreenContainer>
   );
 }

@@ -2,6 +2,10 @@ import { View, Text, Image } from 'react-native'
 import React from 'react'
 import styled from 'styled-components/native'
 import ParcelDetails, { ParcelDetailsProp } from '@/components/molecules/cards/parcelDetails'
+import HorizontalLine from '@/components/atoms/lines/HorizontalLine'
+import colors from '@/constants/colours'
+import TagDistanceDetails from '@/components/molecules/cards/TagDistanceDetails'
+import DimensionsDetails from '@/components/molecules/cards/DimensionsDetails'
 
 type parcelType = 'Small' | 'Medium' | 'Large'
 
@@ -28,7 +32,7 @@ interface cardContainerProp {
 
 
 const CardContainer = styled.View`
-    background-color: lightgreen;
+    background-color: lightblue;
     width: 92%;
     min-height: 300px;
     border-radius: 8px;
@@ -52,19 +56,10 @@ const ParcelCard = () => {
     return (
         <CardContainer>
             <ParcelDetails {...ParcelCardData} />
-            <ParcelDetails {...ParcelCardData} />
-            <ParcelDetails {...ParcelCardData} />
-
-
-            {/* <MidSection>
-
-        </MidSection>
-        <BottomSection>
-            
-        </BottomSection> */}
-
-
-
+            <HorizontalLine lineColor={colors.secondary} />
+            <TagDistanceDetails source="goa" destination="pune" distance={200} price={364} tagName="small" />
+            <HorizontalLine lineColor={colors.secondary} width='90%f'/>
+            <DimensionsDetails length={250} breadth={400} height={300} />
         </CardContainer>
     )
 }

@@ -1,15 +1,15 @@
 import styled from 'styled-components/native'
 
 export interface StyledTextProp {
-    color: string,
-    fontSize?: string,
-    fontWeight?: string,
+    color?: string,
+    fontSize?: number,
+    fontWeight?: number,
     padding?: string,
     textTransform?: string,
 }
 
 const StyledText = styled.Text<StyledTextProp>`
-    ${({ color }: StyledTextProp) => `color: ${color};`}
+    ${({ color }: StyledTextProp) => color && `font-size: ${color};`}
     ${({ fontSize }: StyledTextProp) => fontSize && `font-size: ${fontSize};`}
     ${({ fontWeight }: StyledTextProp) => fontWeight && `font-weight: ${fontWeight};`}
     ${({ padding }: StyledTextProp) => padding && `padding: ${padding};`}

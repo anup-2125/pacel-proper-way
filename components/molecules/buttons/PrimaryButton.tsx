@@ -8,9 +8,9 @@ interface PrimaryButtonProp {
   text: string
 }
 
-const PrimaryButton: React.FC<PrimaryButtonProp> = ({text}) => {
+const PrimaryButton: React.FC<PrimaryButtonProp> = ({ text }) => {
   return (
-    <StyledButton text={text} textTransform='capitalize' bgColor={colors.secondary} textColor='#fff' fontSize='16'/>
+    <StyledButton text={text} textTransform='capitalize' bgColor={colors.secondary} textColor='#fff' fontSize={16} />
   )
 }
 

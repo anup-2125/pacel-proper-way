@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import StyledButton from '@/components/atoms/StyledButton'
+import StyledButton from '@/components/atoms/butttons/StyledButton'
 import colors from '@/constants/colours'
 
 

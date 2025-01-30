@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import styled from 'styled-components/native'
-import StyledText, {StyledTextProp} from '@/components/atoms/StyledText'
+import StyledText, {StyledTextProp} from '@/components/atoms/typography/StyledText'
 
 
 // Prop interfaces

@@ -2,8 +2,8 @@ import { View, Text } from 'react-native'
 import React from 'react'
 
 import colors from '@/constants/colours'
-import StyledText, {StyledTextProp} from '@/components/atoms/StyledText'
-import {StyledButtonProp} from '@/components/atoms/StyledButton'
+import StyledText, {StyledTextProp} from '@/components/atoms/typography/StyledText'
+import {StyledButtonProp} from '@/components/atoms/butttons/StyledButton'
 import styled from 'styled-components/native'
 
 interface TagProp extends StyledTextProp {

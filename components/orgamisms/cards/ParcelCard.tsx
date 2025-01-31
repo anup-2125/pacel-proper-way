@@ -32,10 +32,11 @@ interface cardContainerProp {
 
 
 const CardContainer = styled.View`
-    background-color: lightblue;
-    width: 92%;
-    min-height: 300px;
+    background-color: white;
+    height: 260px;
     border-radius: 8px;
+    align-items: center;
+    margin-bottom: 16px;
 `
 
 const UpperSection = styled.View<cardContainerProp>`
@@ -58,7 +59,7 @@ const ParcelCard = () => {
             <ParcelDetails {...ParcelCardData} />
             <HorizontalLine lineColor={colors.secondary} />
             <TagDistanceDetails source="goa" destination="pune" distance={200} price={364} tagName="small" />
-            <HorizontalLine lineColor={colors.secondary} width='90%f'/>
+            <HorizontalLine lineColor={colors.secondary} width='90%' />
             <DimensionsDetails length={250} breadth={400} height={300} />
         </CardContainer>
     )

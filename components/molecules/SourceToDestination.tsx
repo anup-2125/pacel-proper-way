@@ -17,8 +17,8 @@ const Container = styled.View`
 `
 
 const StyledTextData: StyledTextProp = {
-    fontSize: 18,
-    fontWeight: 600,
+    fontSize: 14,
+    fontWeight: 800,
     textTransform: 'capitalize'
 }
 

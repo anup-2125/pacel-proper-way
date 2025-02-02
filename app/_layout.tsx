@@ -46,12 +46,12 @@ export default function RootLayout() {
         headerRight: () => <CustomHeaderRight />,
         headerTitle: '', // Remove default title
         headerStyle: { backgroundColor: colors.primary },
-        headerTintColor:'#fff'
+        headerTintColor: '#fff'
       }}
     >
       <Drawer.Screen
         name="index"
-        options={{ title: 'Home'}}
+        options={{ title: 'Home' }}
       />
       {/* Add more screens here */}
     </Drawer>

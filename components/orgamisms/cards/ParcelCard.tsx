@@ -32,10 +32,11 @@ interface cardContainerProp {
 
 
 const CardContainer = styled.View`
-    background-color: lightblue;
-    width: 92%;
-    min-height: 300px;
+    background-color: white;
+    height: 260px;
     border-radius: 8px;
+    align-items: center;
+    margin-bottom: 16px;
 `
 
 const UpperSection = styled.View<cardContainerProp>`
@@ -46,7 +47,7 @@ const UpperSection = styled.View<cardContainerProp>`
 
 const ParcelCardData: ParcelDetailsProp = {
     cardId: '123',
-    due: '12-12-2025 12:24 PM',
+    due: '12-12-2025',
     imageURL: 'https://images.pexels.com/photos/1666070/pexels-photo-1666070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     recipientName: 'Anup Narvekar',
     eta: '30mins'
@@ -58,7 +59,7 @@ const ParcelCard = () => {
             <ParcelDetails {...ParcelCardData} />
             <HorizontalLine lineColor={colors.secondary} />
             <TagDistanceDetails source="goa" destination="pune" distance={200} price={364} tagName="small" />
-            <HorizontalLine lineColor={colors.secondary} width='90%f'/>
+            <HorizontalLine lineColor={colors.secondary} width='90%' />
             <DimensionsDetails length={250} breadth={400} height={300} />
         </CardContainer>
     )

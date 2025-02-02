@@ -18,9 +18,11 @@ const StyledView = styled.View`
     flex: 1;
     justify-content: center;
     flex-direction: row;
-    padding: 16px;
+    align-items: center;
+    padding: 24px 16px;
     border-radius: 8px 8px 0 0;
     gap: 8px;
+    /* max-height: 120px; */
 `
 
 const DetailsContainer = styled.View`
@@ -29,13 +31,14 @@ const DetailsContainer = styled.View`
 `
 
 const IdEtaContainer = styled.View`
-    flex: 1;
+    /* flex: 1; */
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 16px;
 `
 
 const AddressLogoContainer = styled.View`
-    flex: 2;
+    /* flex: 2; */
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -45,7 +48,6 @@ const ParcelDetails: React.FC<ParcelDetailsProp> = ({ cardId, due, imageURL, rec
         <StyledView>
             <Image source={{ uri: imageURL }} style={{ width: 80, height: 80, borderRadius: 8 }} resizeMode='cover' />
             <DetailsContainer>
-
                 <IdEtaContainer>
                     <Text style={{ color: colors.secondary, fontWeight: 500 }}>#{cardId}</Text>
                     <Text>{eta}</Text>
@@ -56,7 +58,7 @@ const ParcelDetails: React.FC<ParcelDetailsProp> = ({ cardId, due, imageURL, rec
                         <Text>Deliver to: {recipientName}</Text>
                         <Text>Deliver by: {due}</Text>
                     </View>
-                    <MaterialIcons name='chat' size={24} style={{ marginRight: 15 }} color={colors.secondary}/>
+                    <MaterialIcons name='chat' size={24} style={{ marginRight: 15 }} color={colors.secondary} />
                 </AddressLogoContainer>
 
             </DetailsContainer>

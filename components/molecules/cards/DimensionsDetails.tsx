@@ -15,6 +15,7 @@ const Container = styled.View`
   padding: 16px;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
 `
 
 const BoldText: StyledTextProp = {
@@ -29,9 +30,9 @@ const DimensionsDetails: React.FC<DimensionsDetailsProp> = ({ length, breadth, h
         <View style={{ flexDirection: 'row', gap: 8 }}>
           <StyledText {...BoldText}>L</StyledText>
           <StyledText>{length}</StyledText>
-          <StyledText {...BoldText}>B</StyledText>
+          <StyledText {...BoldText}>x B</StyledText>
           <StyledText>{breadth}</StyledText>
-          <StyledText {...BoldText}>H(cms):</StyledText>
+          <StyledText {...BoldText}>x H:</StyledText>
           <StyledText>{height}</StyledText>
         </View>
       </View>

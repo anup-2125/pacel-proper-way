@@ -12,6 +12,9 @@ const StyledView = styled.View`
     justify-content: space-between;
     align-items: center;
     padding: 8px 16px;
+    max-height: 80px;
+    width: 100%;
+
 `
 
 const TagDistanceContainer = styled.View`
@@ -39,9 +42,9 @@ const TagDistanceDetails: React.FC<TagDistanceDetailsProp> = ({ tagName, source,
                 <Tag text={tagName} />
                 <StyledText>|</StyledText>
                 <SourceToDestination source={source} destination={destination} />
-                <StyledText fontSize={16} color={colors.secondary}>{distance}Km</StyledText>
+                <StyledText fontSize={12} fontWeight={500} color={colors.secondary}>{distance}Km</StyledText>
             </TagDistanceContainer>
-            <StyledText fontSize={24} color={colors.secondary}>{price}Kr</StyledText>
+            <StyledText fontSize={20} fontWeight={600} color={colors.secondary}>{price}Kr</StyledText>
         </StyledView>
     )
 }

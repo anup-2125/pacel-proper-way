@@ -23,9 +23,9 @@ const StyledScrollView = styled.ScrollView`
 
 const PaddedView = styled.View`
   width: 100%;
-  height: 96%;
+  height: 100%;
   position: absolute;
-  bottom: 16px;
+  bottom: 0px;
   padding: 0 16px;
 `
 

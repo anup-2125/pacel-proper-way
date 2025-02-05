@@ -10,7 +10,7 @@ export interface StyledTextProp {
 
 const StyledText = styled.Text<StyledTextProp>`
     ${({ color }: StyledTextProp) => color && `color: ${color};`}
-    ${({ fontSize }: StyledTextProp) => fontSize && `font-size: ${fontSize};`}
+    ${({ fontSize }: StyledTextProp) => fontSize && `font-size: ${fontSize}px;`}
     ${({ fontWeight }: StyledTextProp) => fontWeight && `font-weight: ${fontWeight};`}
     ${({ padding }: StyledTextProp) => padding && `padding: ${padding};`}
     ${({ textTransform }: StyledTextProp) => textTransform && `text-transform: ${textTransform};`}

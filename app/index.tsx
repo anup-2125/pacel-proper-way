@@ -22,8 +22,11 @@ const StyledScrollView = styled.ScrollView`
 `;
 
 const PaddedView = styled.View`
-  width: 96%;
-  height: 100%;
+  width: 100%;
+  height: 96%;
+  position: absolute;
+  bottom: 16px;
+  padding: 0 16px;
 `
 
 export default function Index() {
